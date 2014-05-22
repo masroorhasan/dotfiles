@@ -1,6 +1,6 @@
 [user]
-	name = Masroor Hasan
-	email = m22hasan@uwaterloo.ca
+	name = masroorhasan
+	email = masroor.hasan.n@gmail.com
 
 [alias]
     st = status
@@ -20,8 +20,11 @@
     now = diff HEAD
     stache = stash
     ss = stash
+    cl = "!f() { git clone git@wdca.unfuddle.com:wdca/$1.git $2; }; f"
+    sa = "!f() { git submodule add git@wdca.unfuddle.com:wdca/$1.git $2; }; f"
+    ra = "!f() { git remote add $1 git@wdca.unfuddle.com:wdca/$2.git $3; }; f"
     pom = push origin master
-    hom = push heroku master
+
 [color]
     ui = auto
 [color "branch"]
@@ -43,7 +46,7 @@
 	whitespace = nowarn
 [core]
 	ignorecase = false
-	excludesfile = /Users/Warren/.gitignore
+	excludesfile = /Users/wcurtis/.gitignore_global
 	filemode = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -53,3 +56,6 @@
 	trustExitCode = true
 [mergetool]
 	keepBackup = true
+
+[credential]
+	helper = osxkeychain
